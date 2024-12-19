@@ -1,0 +1,27 @@
+PS C:\Users\traineemtm\Desktop\React\staffin> git filter-branch --force --index-filter "git rm --cached --ignore-unmatch node_modules.zip" --prune-empty --tag-name-filter cat -- --all
+>> 
+WARNING: git-filter-branch has a glut of gotchas generating mangled history
+         rewrites.  Hit Ctrl-C before proceeding to abort, then use an
+         alternative filtering tool such as 'git filter-repo'
+         (https://github.com/newren/git-filter-repo/) instead.  See the
+         filter-branch manual page for more details; to squelch this warning,
+Proceeding with filter-branch...
+Rewrite 1157d5f2ca87e7f3077748126c20177ce25d97fd (151/155) (118 seconds passed, remaining 3 predicted)    rm 'node_modules.zip'
+Rewrite a206bee197a58b26f04f928997cef7799b52b689 (155/155) (122 seconds passed, remaining 0 predicted)
+WARNING: Ref 'refs/heads/main' is unchanged
+Ref 'refs/heads/master' was rewritten
+WARNING: Ref 'refs/remotes/origin/main' is unchanged
+WARNING: Ref 'refs/remotes/origin/master' is unchanged
+PS C:\Users\traineemtm\Desktop\React\staffin> git log -- node_modules.zip
+>>
+PS C:\Users\traineemtm\Desktop\React\staffin> git push origin master --force
+>> 
+Enumerating objects: 75, done.
+Counting objects: 100% (75/75), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (39/39), done.
+Writing objects: 100% (44/44), 6.83 KiB | 776.00 KiB/s, done.
+Total 44 (delta 26), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (26/26), completed with 18 local objects.
+To https://github.com/issac155/staffin.git
+   c70f11f..cd9d289  master -> master
